@@ -25,7 +25,7 @@ def replace_sensitive_words(filename):
             while True:
                 index=enter.find(x,a)
                 if index!=-1:
-                    enter=enter[:index]+'*'*len(x)+enter[index+len(x):]   #一个汉字三个字节
+                    enter=enter[:index]+'*'*len(x)+enter[index+len(x):]
                     a=a+1
                 else:
                     break
@@ -35,6 +35,3 @@ def replace_sensitive_words(filename):
 
 if __name__=='__main__':
     print replace_sensitive_words('words.txt')
-
-f=open('words.txt')
-print f.read().split("\n")
